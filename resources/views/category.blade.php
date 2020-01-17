@@ -220,27 +220,10 @@
 							<div class="products_bar_content d-flex flex-column flex-xxl-row align-items-start align-items-xxl-center justify-content-start">
 								<div class="product_categories">
 									<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
-										<li class="active"><a href="#">All</a></li>
-										<li><a href="#">Hot Products</a></li>
-										<li><a href="#">New Products</a></li>
-										<li><a href="#">Sale Products</a></li>
-									</ul>
-								</div>
-								<div class="products_bar_side ml-xxl-auto d-flex flex-row align-items-center justify-content-start">
-									<div class="products_dropdown product_dropdown_sorting">
-										<div class="isotope_sorting_text"><span>Default Sorting</span><i class="fa fa-caret-down" aria-hidden="true"></i></div>
-										<ul>
-											<li class="item_sorting_btn" data-isotope-option='{ "sortBy": "original-order" }'>Default</li>
-											<li class="item_sorting_btn" data-isotope-option='{ "sortBy": "price" }'>Price</li>
-											<li class="item_sorting_btn" data-isotope-option='{ "sortBy": "name" }'>Name</li>
-										</ul>
-									</div>
-									<div class="product_view d-flex flex-row align-items-center justify-content-start">
-										<div class="view_item active"><img src="/astar/images/view_1.png" alt=""></div>
-										<div class="view_item"><img src="/astar/images/view_2.png" alt=""></div>
-										<div class="view_item"><img src="/astar/images/view_3.png" alt=""></div>
-									</div>
-									<div class="products_dropdown text-right product_dropdown_filter">
+										<li class="active"><a href="">All</a></li>
+										<li><a href="#">Dewasa</a></li>
+                                        <li><a href="#">Anak-anak</a></li>
+                                        <li><div class="products_dropdown text-right product_dropdown_filter" style="margin-left: 200%; margin-top:10%" >
 										<div class="isotope_filter_text"><span>Filter</span><i class="fa fa-caret-down" aria-hidden="true"></i></div>
 										<ul>
 											<li class="item_filter_btn" data-filter="*">All</li>
@@ -248,7 +231,20 @@
 											<li class="item_filter_btn" data-filter=".new">New</li>
 											<li class="item_filter_btn" data-filter=".sale">Sale</li>
 										</ul>
-									</div>
+									</div></li>
+									</ul>
+								</div>
+								<div class="products_bar_side ml-xxl-auto d-flex flex-row align-items-center justify-content-start">
+									{{-- <div class="products_dropdown product_dropdown_sorting">
+										<div class="isotope_sorting_text"><span>Default Sorting</span><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+										<ul>
+											<li class="item_sorting_btn" data-isotope-option='{ "sortBy": "original-order" }'>Default</li>
+											<li class="item_sorting_btn" data-isotope-option='{ "sortBy": "price" }'>Price</li>
+											<li class="item_sorting_btn" data-isotope-option='{ "sortBy": "name" }'>Name</li>
+										</ul>
+									</div> --}}
+
+
 								</div>
 							</div>
 						</div>
@@ -261,8 +257,79 @@
 				<div class="row">
 					<div class="col">
 						<div class="products_container grid">
+                            <!-- Product -->
+							<div class="product grid-item hot">
+								<div class="product_inner">
+									<div class="product_image">
+										<img src="/astar/images/tas4.jpg" alt="" width="250" height="300">
+										<div class="product_tag">hot</div>
+									</div>
+									<div class="product_content text-center">
+										<div class="product_title"><a href="product.html"></a></div>
+										<div class="product_price">175k</div>
+										<div class="product_button ml-auto mr-auto trans_200"><a href="#">Add To Cart</a></div>
+									</div>
+								</div>
+							</div>
 
 							<!-- Product -->
+							<div class="product grid-item">
+								<div class="product_inner">
+                                    <div class="product_image"><img src="/astar/images/tas6.jpg" alt="" width="250" height="300"></div>
+                                    <div class="product_tag">new</div>
+									<div class="product_content text-center">
+										<div class="product_title"><a href="product.html"></a></div>
+										<div class="product_price">250k</div>
+										<div class="product_button ml-auto mr-auto trans_200"><a href="#">Add To Cart</a></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Product -->
+							<div class="product grid-item sale">
+								<div class="product_inner">
+									<div class="product_image">
+										<img src="/astar/images/tas7.jpg" alt="" width="250" height="300">
+										<div class="product_tag">sale</div>
+									</div>
+									<div class="product_content text-center">
+										<div class="product_title"><a href="product.html"></a></div>
+										<div class="product_price">250k</div>
+										<div class="product_button ml-auto mr-auto trans_200"><a href="#">Add To Cart</a></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Product -->
+							<div class="product grid-item">
+								<div class="product_inner">
+									<div class="product_image">
+                                        <img src="/astar/images/tas1.jpg" alt="" width="250" height="300">
+                                        <div class="product_tag">sale</div>
+									</div>
+									<div class="product_content text-center">
+										<div class="product_title"><a href="product.html"></a></div>
+										<div class="product_price">309k</div>
+										<div class="product_button ml-auto mr-auto trans_200"><a href="#">Add To Cart</a></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Product -->
+							<div class="product grid-item">
+								<div class="product_inner">
+									<div class="product_image">
+										<img src="/astar/images/tas8.jpg" alt="" width="250" height="300">
+									</div>
+									<div class="product_content text-center">
+										<div class="product_title"><a href="product.html"></a></div>
+										<div class="product_price">260k</div>
+										<div class="product_button ml-auto mr-auto trans_200"><a href="#">Add To Cart</a></div>
+									</div>
+								</div>
+							</div>
+
+							{{-- <!-- Product -->
 							<div class="product grid-item hot">
 								<div class="product_inner">
 									<div class="product_image">
@@ -330,7 +397,7 @@
 										<div class="product_button ml-auto mr-auto trans_200"><a href="#">add to cart</a></div>
 									</div>
 								</div>
-							</div>
+							</div> --}}
 
 							<!-- Product -->
 							<div class="product grid-item new">
@@ -340,14 +407,14 @@
 										<div class="product_tag">new</div>
 									</div>
 									<div class="product_content text-center">
-										<div class="product_title"><a href="product.html">hype grey shirt</a></div>
-										<div class="product_price">$59.90</div>
+										{{-- <div class="product_title"><a href="product.html">hype grey shirt</a></div> --}}
+										<div class="product_price">350k</div>
 										<div class="product_button ml-auto mr-auto trans_200"><a href="#">add to cart</a></div>
 									</div>
 								</div>
 							</div>
 
-							<!-- Product -->
+							{{-- <!-- Product -->
 							<div class="product grid-item">
 								<div class="product_inner">
 									<div class="product_image">
@@ -460,10 +527,10 @@
 										<div class="product_button ml-auto mr-auto trans_200"><a href="#">add to cart</a></div>
 									</div>
 								</div>
-							</div>
+							</div> --}}
 
 							<!-- Product -->
-							<div class="product grid-item sale">
+							{{-- <div class="product grid-item sale">
 								<div class="product_inner">
 									<div class="product_image">
 										<img src="/astar/images/product_15.jpg" alt="">
@@ -475,10 +542,10 @@
 										<div class="product_button ml-auto mr-auto trans_200"><a href="#">add to cart</a></div>
 									</div>
 								</div>
-							</div>
+							</div> --}}
 
 							<!-- Product -->
-							<div class="product grid-item">
+							{{-- <div class="product grid-item">
 								<div class="product_inner">
 									<div class="product_image">
 										<img src="/astar/images/product_16.jpg" alt="">
@@ -489,7 +556,7 @@
 										<div class="product_button ml-auto mr-auto trans_200"><a href="#">add to cart</a></div>
 									</div>
 								</div>
-							</div>
+							</div> --}}
 
 						</div>
 					</div>
@@ -500,27 +567,7 @@
 
 	<!-- Newsletter -->
 
-	<div class="newsletter">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/newsletter.jpg" data-speed="0.8"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 offset-lg-2">
-					<div class="newsletter_content text-center">
-						<div class="newsletter_title_container">
-							<div class="newsletter_title">subscribe to our newsletter</div>
-							<div class="newsletter_subtitle">we won't spam, we promise!</div>
-						</div>
-						<div class="newsletter_form_container">
-							<form action="#" id="newsletter_form" class="newsletter_form">
-								<input type="email" class="newsletter_input" placeholder="your e-mail here" required="required">
-								<button class="newsletter_button">submit</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+
 
 	<!-- Footer -->
 
@@ -538,68 +585,16 @@
 									<a href="#"><div>S_<span>bag</span></div></a>
 								</div>
 								<div class="footer_about_text">
-									<p>Donec vitae purus nunc. Morbi faucibus erat sit amet congue mattis. Nullam fringilla faucibus urna, id dapibus erat iaculis ut. Integer ac sem.</p>
+									<p>Kini Sisil Bag menyediakan pembayaran melalui kartu kredit dan sejenisnya.</p>
 								</div>
 								<div class="cards">
 									<ul class="d-flex flex-row align-items-center justify-content-start">
 										<li><a href="#"><img src="/astar/images/card_1.jpg" alt=""></a></li>
 										<li><a href="#"><img src="/astar/images/card_2.jpg" alt=""></a></li>
 										<li><a href="#"><img src="/astar/images/card_3.jpg" alt=""></a></li>
-										<li><a href="#"><img src="/astar/images/card_4.jpg" alt=""></a></li>
-										<li><a href="#"><img src="/astar/images/card_5.jpg" alt=""></a></li>
+										{{-- <li><a href="#"><img src="/astar/images/card_4.jpg" alt=""></a></li>
+										<li><a href="#"><img src="/astar/images/card_5.jpg" alt=""></a></li> --}}
 									</ul>
-								</div>
-							</div>
-						</div>
-
-						<!-- Questions -->
-						<div class="col-xxl-3 col-md-6 footer_col">
-							<div class="footer_questions">
-								<div class="footer_title">questions</div>
-								<div class="footer_list">
-									<ul>
-										<li><a href="#">About us</a></li>
-										<li><a href="#">Track Orders</a></li>
-										<li><a href="#">Returns</a></li>
-										<li><a href="#">Jobs</a></li>
-										<li><a href="#">Shipping</a></li>
-										<li><a href="#">Blog</a></li>
-										<li><a href="#">Partners</a></li>
-										<li><a href="#">Bloggers</a></li>
-										<li><a href="#">Support</a></li>
-										<li><a href="#">Terms of Use</a></li>
-										<li><a href="#">Press</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-						<!-- Blog -->
-						<div class="col-xxl-3 col-md-6 footer_col">
-							<div class="footer_blog">
-								<div class="footer_title">blog</div>
-								<div class="footer_blog_container">
-
-									<!-- Blog Item -->
-									<div class="footer_blog_item d-flex flex-row align-items-start justify-content-start">
-										<div class="footer_blog_image"><a href="blog.html"><img src="/astar/images/footer_blog_1.jpg" alt=""></a></div>
-										<div class="footer_blog_content">
-											<div class="footer_blog_title"><a href="blog.html">what shoes to wear</a></div>
-											<div class="footer_blog_date">june 06, 2018</div>
-											<div class="footer_blog_link"><a href="blog.html">Read More</a></div>
-										</div>
-									</div>
-
-									<!-- Blog Item -->
-									<div class="footer_blog_item d-flex flex-row align-items-start justify-content-start">
-										<div class="footer_blog_image"><a href="blog.html"><img src="/astar/images/footer_blog_2.jpg" alt=""></a></div>
-										<div class="footer_blog_content">
-											<div class="footer_blog_title"><a href="blog.html">trends this year</a></div>
-											<div class="footer_blog_date">june 06, 2018</div>
-											<div class="footer_blog_link"><a href="blog.html">Read More</a></div>
-										</div>
-									</div>
-
 								</div>
 							</div>
 						</div>
@@ -610,21 +605,26 @@
 								<div class="footer_title">contact</div>
 								<div class="footer_contact_list">
 									<ul>
-										<li class="d-flex flex-row align-items-start justify-content-start"><span>C.</span><div>Your Company Ltd</div></li>
-										<li class="d-flex flex-row align-items-start justify-content-start"><span>A.</span><div>1481 Creekside Lane  Avila Beach, CA 93424, P.O. BOX 68</div></li>
-										<li class="d-flex flex-row align-items-start justify-content-start"><span>T.</span><div>+53 345 7953 32453</div></li>
-										<li class="d-flex flex-row align-items-start justify-content-start"><span>E.</span><div>office@youremail.com</div></li>
+										<li class="d-flex flex-row align-items-start justify-content-start"><span>C.</span><div>Sisil Bag Collection</div></li>
+										<li class="d-flex flex-row align-items-start justify-content-start"><span>A.</span><div>Jalan Pasar Baru Trade Centre</div></li>
+										<li class="d-flex flex-row align-items-start justify-content-start"><span>T.</span><div>+62 821-1579-7128</div></li>
+										<li class="d-flex flex-row align-items-start justify-content-start"><span>E.</span><div>sisilbag@gmail.com</div></li>
 									</ul>
 								</div>
 							</div>
 						</div>
+
+						<!-- Blog -->
+
+
+
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<!-- Social -->
-		<div class="footer_social">
+		{{-- <div class="footer_social">
 			<div class="section_container">
 				<div class="container">
 					<div class="row">
@@ -638,19 +638,9 @@
 									</div>
 								</a>
 								<!-- Google + -->
-								<a href="#">
-									<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
-										<div class="footer_social_icon"><i class="fa fa-google-plus" aria-hidden="true"></i></div>
-										<div class="footer_social_title">google +</div>
-									</div>
-								</a>
+
 								<!-- Pinterest -->
-								<a href="#">
-									<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
-										<div class="footer_social_icon"><i class="fa fa-pinterest" aria-hidden="true"></i></div>
-										<div class="footer_social_title">pinterest</div>
-									</div>
-								</a>
+
 								<!-- Facebook -->
 								<a href="#">
 									<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
@@ -659,32 +649,17 @@
 									</div>
 								</a>
 								<!-- Twitter -->
-								<a href="#">
-									<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
-										<div class="footer_social_icon"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-										<div class="footer_social_title">twitter</div>
-									</div>
-								</a>
+
 								<!-- YouTube -->
-								<a href="#">
-									<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
-										<div class="footer_social_icon"><i class="fa fa-youtube" aria-hidden="true"></i></div>
-										<div class="footer_social_title">youtube</div>
-									</div>
-								</a>
+
 								<!-- Tumblr -->
-								<a href="#">
-									<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
-										<div class="footer_social_icon"><i class="fa fa-tumblr-square" aria-hidden="true"></i></div>
-										<div class="footer_social_title">tumblr</div>
-									</div>
-								</a>
+
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> --}}
 
 		<!-- Credits -->
 		<div class="credits">

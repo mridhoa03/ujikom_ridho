@@ -253,61 +253,9 @@
 									<a href="#"><div>S_<span>bag</span></div></a>
 								</div>
 								<div class="footer_about_text">
-									<h4 style="">Sisil Bag adalah toko yang menyediakan tas dengan model dan varian yang beragam. Macam-macam jenis dan kategori tersedia untuk dewasa maupun anak-anak. Terletak di Pasar Baru Trade Centre Bandung</h4>
+									<h4 style="">Sisil telah berdiri kurang lebih sekitar 6 tahun dan telah memperluas cabangnya menjadi dua toko. Sisil Bag adalah toko yang menyediakan tas dengan model dan varian yang beragam. Macam-macam jenis dan kategori tersedia untuk dewasa maupun anak-anak. Terletak di Pasar Baru Trade Centre Bandung</h4>
 								</div>
 
-							</div>
-						</div>
-
-						<!-- Questions -->
-						<div class="col-xxl-3 col-md-6 footer_col">
-							<div class="footer_questions">
-								<div class="footer_title">questions</div>
-								<div class="footer_list">
-									<ul>
-										<li><a href="#">About us</a></li>
-										<li><a href="#">Track Orders</a></li>
-										<li><a href="#">Returns</a></li>
-										<li><a href="#">Jobs</a></li>
-										<li><a href="#">Shipping</a></li>
-										<li><a href="#">Blog</a></li>
-										<li><a href="#">Partners</a></li>
-										<li><a href="#">Bloggers</a></li>
-										<li><a href="#">Support</a></li>
-										<li><a href="#">Terms of Use</a></li>
-										<li><a href="#">Press</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-						<!-- Blog -->
-						<div class="col-xxl-3 col-md-6 footer_col">
-							<div class="footer_blog">
-								<div class="footer_title">blog</div>
-								<div class="footer_blog_container">
-
-									<!-- Blog Item -->
-									<div class="footer_blog_item d-flex flex-row align-items-start justify-content-start">
-										<div class="footer_blog_image"><a href="blog.html"><img src="/astar/images/footer_blog_1.jpg" alt=""></a></div>
-										<div class="footer_blog_content">
-											<div class="footer_blog_title"><a href="blog.html">what shoes to wear</a></div>
-											<div class="footer_blog_date">june 06, 2018</div>
-											<div class="footer_blog_link"><a href="blog.html">Read More</a></div>
-										</div>
-									</div>
-
-									<!-- Blog Item -->
-									<div class="footer_blog_item d-flex flex-row align-items-start justify-content-start">
-										<div class="footer_blog_image"><a href="blog.html"><img src="/astar/images/footer_blog_2.jpg" alt=""></a></div>
-										<div class="footer_blog_content">
-											<div class="footer_blog_title"><a href="blog.html">trends this year</a></div>
-											<div class="footer_blog_date">june 06, 2018</div>
-											<div class="footer_blog_link"><a href="blog.html">Read More</a></div>
-										</div>
-									</div>
-
-								</div>
 							</div>
 						</div>
 
@@ -317,21 +265,26 @@
 								<div class="footer_title">contact</div>
 								<div class="footer_contact_list">
 									<ul>
-										<li class="d-flex flex-row align-items-start justify-content-start"><span>C.</span><div>Your Company Ltd</div></li>
-										<li class="d-flex flex-row align-items-start justify-content-start"><span>A.</span><div>1481 Creekside Lane  Avila Beach, CA 93424, P.O. BOX 68</div></li>
-										<li class="d-flex flex-row align-items-start justify-content-start"><span>T.</span><div>+53 345 7953 32453</div></li>
-										<li class="d-flex flex-row align-items-start justify-content-start"><span>E.</span><div>office@youremail.com</div></li>
+										<li class="d-flex flex-row align-items-start justify-content-start"><span>C.</span><div>Sisil Bag Collection</div></li>
+										<li class="d-flex flex-row align-items-start justify-content-start"><span>A.</span><div>Jalan Pasar Baru Trade Centre</div></li>
+										<li class="d-flex flex-row align-items-start justify-content-start"><span>T.</span><div>+62 821-1579-7128</div></li>
+										<li class="d-flex flex-row align-items-start justify-content-start"><span>E.</span><div>sisilbag@gmail.com</div></li>
 									</ul>
 								</div>
 							</div>
 						</div>
+
+						<!-- Blog -->
+
+
+
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<!-- Social -->
-		<div class="footer_social">
+		{{-- <div class="footer_social">
 			<div class="section_container">
 				<div class="container">
 					<div class="row">
@@ -345,53 +298,28 @@
 									</div>
 								</a>
 								<!-- Google + -->
-								<a href="#">
-									<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
-										<div class="footer_social_icon"><i class="fa fa-google-plus" aria-hidden="true"></i></div>
-										<div class="footer_social_title">google +</div>
-									</div>
-								</a>
+
 								<!-- Pinterest -->
-								<a href="#">
-									<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
-										<div class="footer_social_icon"><i class="fa fa-pinterest" aria-hidden="true"></i></div>
-										<div class="footer_social_title">pinterest</div>
-									</div>
-								</a>
+
 								<!-- Facebook -->
 								<a href="#">
-									<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
-										<div class="footer_social_icon"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+									<div class="footer_social_item" >
+										<div class="footer_social_icon "style="align:center"><i class="fa fa-facebook" aria-hidden="true"></i></div>
 										<div class="footer_social_title">facebook</div>
 									</div>
 								</a>
 								<!-- Twitter -->
-								<a href="#">
-									<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
-										<div class="footer_social_icon"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-										<div class="footer_social_title">twitter</div>
-									</div>
-								</a>
+
 								<!-- YouTube -->
-								<a href="#">
-									<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
-										<div class="footer_social_icon"><i class="fa fa-youtube" aria-hidden="true"></i></div>
-										<div class="footer_social_title">youtube</div>
-									</div>
-								</a>
+
 								<!-- Tumblr -->
-								<a href="#">
-									<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
-										<div class="footer_social_icon"><i class="fa fa-tumblr-square" aria-hidden="true"></i></div>
-										<div class="footer_social_title">tumblr</div>
-									</div>
-								</a>
+
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> --}}
 
 		<!-- Credits -->
 		<div class="credits">

@@ -487,7 +487,7 @@
 								<div class="footer_contact_list">
 									<ul>
 										<li class="d-flex flex-row align-items-start justify-content-start"><span>C.</span><div>SISIL BAG COLLECTION</div></li>
-										{{-- <li class="d-flex flex-row align-items-start justify-content-start"><span>A.</span><div>1481 Creekside Lane  Avila Beach, CA 93424, P.O. BOX 68</div></li> --}}
+										<li class="d-flex flex-row align-items-start justify-content-start"><span>T.</span><div>+62 821-1579-7128</div></li>
 										<li class="d-flex flex-row align-items-start justify-content-start"><span>T.</span><div>+62 821-1579-7128</div></li>
 										<li class="d-flex flex-row align-items-start justify-content-start"><span>E.</span><div>sisilbag@gmail.com</div></li>
 									</ul>
@@ -500,7 +500,7 @@
 		</div>
 
 		<!-- Social -->
-		<div class="footer_social">
+		{{-- <div class="footer_social">
 			<div class="section_container">
 				<div class="container">
 					<div class="row">
@@ -514,19 +514,9 @@
 									</div>
 								</a>
 								<!-- Google + -->
-								<a href="#">
-									<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
-										<div class="footer_social_icon"><i class="fa fa-google-plus" aria-hidden="true"></i></div>
-										<div class="footer_social_title">google +</div>
-									</div>
-								</a>
+
 								<!-- Pinterest -->
-								<a href="#">
-									<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
-										<div class="footer_social_icon"><i class="fa fa-pinterest" aria-hidden="true"></i></div>
-										<div class="footer_social_title">pinterest</div>
-									</div>
-								</a>
+
 								<!-- Facebook -->
 								<a href="#">
 									<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
@@ -535,32 +525,17 @@
 									</div>
 								</a>
 								<!-- Twitter -->
-								<a href="#">
-									<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
-										<div class="footer_social_icon"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-										<div class="footer_social_title">twitter</div>
-									</div>
-								</a>
+
 								<!-- YouTube -->
-								<a href="#">
-									<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
-										<div class="footer_social_icon"><i class="fa fa-youtube" aria-hidden="true"></i></div>
-										<div class="footer_social_title">youtube</div>
-									</div>
-								</a>
+
 								<!-- Tumblr -->
-								<a href="#">
-									<div class="footer_social_item d-flex flex-row align-items-center justify-content-start">
-										<div class="footer_social_icon"><i class="fa fa-tumblr-square" aria-hidden="true"></i></div>
-										<div class="footer_social_title">tumblr</div>
-									</div>
-								</a>
+
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> --}}
 
 		<!-- Credits -->
 		<div class="credits">
