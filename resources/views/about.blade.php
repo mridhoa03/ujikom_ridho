@@ -208,7 +208,9 @@
 			<ul>
 				<li><a href="/">home<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 				<li><a href="/category">category<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-				<li><a href="/about">about<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                <li><a href="/about">about<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                <li><a href="/cart">cart<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+
 			</ul>
 		</nav>
 
