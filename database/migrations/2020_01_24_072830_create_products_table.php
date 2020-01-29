@@ -20,8 +20,8 @@ class CreateProductsTable extends Migration
             $table->unsignedBigInteger('category_id');
             $table->text('description')->nullable();
             $table->string('image');
+            $table->integer('stok');
             $table->integer('price');
-            $table->integer('weight');
             $table->timestamps();
         });
     }

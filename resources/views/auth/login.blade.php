@@ -1,10 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+<body style="background-image: url(/assets/images/admin.png); background-size:200%">
+
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card" style="background-color:transparent; border-color: transparent">
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
@@ -70,4 +73,5 @@
         </div>
     </div>
 </div>
+</body>
 @endsection
