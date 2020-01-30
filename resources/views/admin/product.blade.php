@@ -62,11 +62,11 @@
         ajax: "{{ url('admin/produk') }}",
         columns: [
             {data: 'DT_RowIndex', name: 'DT_RowIndex'},
-            {data: 'gambar', name: 'gambar'},
-            {data: 'nama', name: 'nama'},
+            {data: 'image', name: 'image'},
+            {data: 'name', name: 'name'},
             {data: 'slug', name: 'slug'},
-            {data: 'kategori.nama', name: 'category_id'},
-            {data: 'harga', name: 'harga'},
+            {data: 'name.category', name: 'category_id'},
+            {data: 'price', name: 'price'},
             {data: 'stok', name: 'stok'},
             {data: 'action', name: 'action', orderable: false, searchable: false},
         ]
@@ -85,10 +85,10 @@
             $('#modal').modal({backdrop: 'static', keyboard: false});
             $('#modal').modal('show');
             $('#product_id').val(data.produk.id);
-            $('#nama').val(data.produk.nama);
+            $('#name').val(data.produk.name);
             $('#category_id').html('');
-            $('#category_id').html(data.kategori);
-            $('#harga').val(data.produk.harga);
+            $('#category_id').html(data.category);
+            $('#price').val(data.produk.price);
             $('#stok').val(data.produk.stok);
             // $('#foto').html(data.produk.foto);
             $('#description').val(data.produk.deskripsi);

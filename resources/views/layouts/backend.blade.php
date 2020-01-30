@@ -39,10 +39,10 @@
                     <ul class="navbar-nav ml-auto navbar-right-top">
 
                         <li class="nav-item dropdown nav-user">
-                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/assets/images/us.jpeg" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
-                                <h5 class="mb-0 text-white nav-user-name"><i class="fas fa-user mr-2"></i>{{Auth::user()->email}}</h5>
+                                <h5 class="mb-0 text-white nav-user-name"><i class="fa fa-fw fa-user-circle"></i>{{Auth::user()->email}}</h5>
                                     <span class="status"></span><span class="ml-2">&nbsp;&nbsp;&nbsp;&nbsp;  {{Auth::user()->name}}</span>
                                 </div>
 
@@ -80,11 +80,11 @@
                                 Menu
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="#" aria-expanded="false" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
+                            <a class="nav-link" href="{{url('/admin')}}" aria-expanded="false" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
 
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" aria-expanded="false" aria-controls="submenu-2"><i class="fa fa-fw fa-rocket"></i>User</a>
+                                <a class="nav-link" href="#" aria-expanded="false" aria-controls="submenu-2"><i class="fas fa-user mr-2" style="color:aqua"></i></i>User</a>
 
                             </li>
                             <li class="nav-item">
@@ -92,11 +92,11 @@
 
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="{{url('admin/category')}}" aria-expanded="false" aria-controls="submenu-3"><i class="fas fa-fw fa-chart-pie"></i>Kategori</a>
+                            <a class="nav-link" href="{{url('admin/category')}}" aria-expanded="false" aria-controls="submenu-3"><i class="fas fa-fw fa-chart-pie" ></i>Kategori</a>
 
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="{{url('admin/product')}}"  aria-expanded="false"  aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>Produk</a>
+                                <a class="nav-link" href="{{url('admin/product')}}"  aria-expanded="false"  aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms" style="color: lightcoral"></i>Produk</a>
 
                             </li>
                             <li class="nav-item">
