@@ -20,17 +20,17 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $data = Product::with('kategori')->latest()->get();
+            $data = Product::with('category')->latest()->get();
             return Datatables::of($data)
                 ->addIndexColumn()
                 ->addColumn('action', function ($row) {
-                    $btn = '<a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $row->id . '" data-original-title="Delete" class="btn btn-warning btn-sm edit"><i class="nav-icon fas fa-pen" style="color:white"></i></a>';
-                    $btn = $btn . ' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $row->id . '" data-original-title="Delete" class="btn btn-danger btn-sm hapus"><i class="nav-icon fas fa-trash" style="width:15px"></i></a>';
+                    $btn = '<a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $row->id . '" data-original-title="Delete" class="btn btn-warning btn-sm edit">edit</a>';
+                    $btn = $btn . ' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $row->id . '" data-original-title="Delete" class="btn btn-danger btn-sm hapus">hapus</a>';
 
                     return $btn;
                 })
                 ->addColumn('gambar', function ($data) {
-                    $img = '<img src="../assets/poto/' . $data->foto . '" alt="" width="100%" height="15%">';
+                    $img = '<img src="../assets/images/' . $data->gambar . '" alt="" width="100%" height="15%">';
                     return $img;
                 })
                 ->rawColumns(['action', 'gambar'])
@@ -57,7 +57,86 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // if (is_null($request->produk_id)) {
+        //     $request->validate(
+        //         [
+        //             'nama' => 'required',
+        //             'category_id' => 'required',
+        //             'harga' => 'required',
+        //             'gambar' => 'required'
+        //         ]
+        //     );
+        // } else {
+        //     $request->validate(
+        //         [
+        //             'nama' => 'required',
+        //             'category_id' => 'required',
+        //             'harga' => 'required'
+        //         ]
+        //     );
+        // }
+
+        $slug = Str::slug($request->nama, '-');
+
+        if (is_null($request->produk_id)) {
+            $photo = Str::random(6) . $request->file('gambar')->getClientOriginalName();
+            $request->gambar->move(public_path('assets/images'), $photo);
+            Product::updateOrCreate(
+                ['id' => $request->produk_id],
+                [
+                    'nama' => $request->nama,
+                    'slug' => $slug,
+                    'category_id' => $request->category_id,
+                    'harga' => $request->harga,
+                    'stok' => $request->stok,
+                    'deskripsi' => $request->deskripsi,
+                    'gambar' => $photo,
+
+                ]
+            );
+        } else {
+            if (is_null($request->gambar)) {
+                Product::updateOrCreate(
+                    ['id' => $request->produk_id],
+                    [
+                        'nama' => $request->nama,
+                        'slug' => $slug,
+                        'category_id' => $request->category_id,
+                        'harga' => $request->harga,
+                        'stok' => $request->stok,
+                        'deskripsi' => $request->deskripsi
+
+                    ]
+                );
+            } else {
+                $old_photo = \DB::select('SELECT foto FROM produks WHERE id = ' . $request->produk_id . '');
+                $data = '';
+                foreach ($old_photo as $value) {
+                    $data .= $value->gambar;
+                }
+                $image_path = "assets/images/" . $data;
+                if (File::exists($image_path)) {
+                    File::delete($image_path);
+                }
+                $photo = Str::random(6) . $request->file('gambar')->getClientOriginalName();
+                $request->gambar->move(public_path('assets/images'), $photo);
+                Product::updateOrCreate(
+                    ['id' => $request->produk_id],
+                    [
+                        'nama' => $request->nama,
+                        'slug' => $slug,
+                        'category_id' => $request->category_id,
+                        'harga' => $request->harga,
+                        'stok' => $request->stok,
+                        'deskripsi' => $request->deskripsi,
+                        'gambar' => $photo,
+
+                    ]
+                );
+            }
+        }
+
+        return response()->json(['success' => 'Berhasil di Simpan']);
     }
 
     /**
@@ -79,7 +158,15 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+         $produk = Product::find($id);
+        $kategori = \DB::select('SELECT id,nama FROM kategoris');
+        foreach ($kategori as $value) {
+            $data[] = '<option value="' . $value->id . '" ' . ($value->id == $produk->category_id ? 'selected' : '') . '>' . $value->nama . '</option>';
+        }
+
+        $option = implode('', $data);
+        $data = ['produk' => $produk, 'kategori' => $option];
+        return response()->json($data);
     }
 
     /**
@@ -102,6 +189,12 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+         $produk = Product::find($id);
+        $image_path = "assets/images/" . $produk->gambar;
+        if (File::exists($image_path)) {
+            File::delete($image_path);
+        }
+        $produk->delete();
+        return response()->json(['success' => 'Berhasil Dihapus']);
     }
 }

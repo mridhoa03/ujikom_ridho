@@ -221,9 +221,12 @@
 							<div class="products_bar_content d-flex flex-column flex-xxl-row align-items-start align-items-xxl-center justify-content-start">
 								<div class="product_categories">
 									<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
-										<li class="active"><a href="">All</a></li>
-										<li><a href="#">Dewasa</a></li>
-                                        <li><a href="#">Anak-anak</a></li>
+                                        @php
+                                            $kategori = \App\Category::All();
+                                        @endphp
+                                        @foreach ($kategori as $data)
+                                    <li><a href="#">{{ $data->name}}</a></li>
+                                        @endforeach
                                         <li><div class="products_dropdown text-right product_dropdown_filter" style="margin-left: 200%; margin-top:10%" >
 										<div class="isotope_filter_text"><span>Filter</span><i class="fa fa-caret-down" aria-hidden="true"></i></div>
 										<ul>

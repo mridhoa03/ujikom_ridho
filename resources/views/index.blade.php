@@ -217,7 +217,6 @@
 						<div class="home_content">
 
 							<div class="home_title">Sisil Bag</div>
-							<div class="button button_1 home_button trans_200"><a href="categories.html">Shop NOW!</a></div>
 						</div>
 					</div>
 				</div>
@@ -229,7 +228,6 @@
 						<div class="home_content">
 
 							<div class="home_title">New Collection</div>
-							<div class="button button_1 home_button trans_200"><a href="categories.html">Shop NOW!</a></div>
 						</div>
 					</div>
 				</div>
@@ -241,7 +239,6 @@
 						<div class="home_content">
 
 							<div class="home_title">Multi Varian</div>
-							<div class="button button_1 home_button trans_200"><a href="categories.html">Shop NOW!</a></div>
 						</div>
 					</div>
 				</div>
@@ -257,59 +254,9 @@
 
 	<!-- Boxes -->
 
-	<div class="boxes">
-		<div class="section_container">
-			<div class="container">
-				<div class="row">
-
-					<!-- Box -->
-					<div class="col-lg-4 box_col">
-						<div class="box">
-							<div class="box_image"><img src="/astar/images/tas1.jpg" alt="" width="200" height="150"></div>
-							<div class="box_title trans_200"><a href="categories.html">summer collection</a></div>
-						</div>
-					</div>
-
-					<!-- Box -->
-					<div class="col-lg-4 box_col">
-						<div class="box">
-							<div class="box_image"><img src="/astar/images/tas2.jpg" alt="" width="200" height="150"></div>
-							<div class="box_title trans_200"><a href="categories.html">eyewear collection</a></div>
-						</div>
-					</div>
-
-					<!-- Box -->
-					<div class="col-lg-4 box_col">
-						<div class="box">
-							<div class="box_image"><img src="/astar/images/tas3.jpg" alt="" width="200" height="150"></div>
-							<div class="box_title trans_200"><a href="categories.html">basic pieces</a></div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<!-- Categories -->
 
-	<div class="categories">
-		<div class="section_container">
-			<div class="container">
-				<div class="row">
-					<div class="col text-center">
-						<div class="categories_list_container">
-							<ul class="categories_list d-flex flex-row align-items-center justify-content-start">
-								<li><a href="categories.html">new arrivals</a></li>
-								<li><a href="categories.html">recommended</a></li>
-								<li><a href="categories.html">best sellers</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<!-- Products -->
 
@@ -320,119 +267,25 @@
 					<div class="col">
 						<div class="products_container grid">
 
-							<!-- Product -->
-							<div class="product grid-item hot">
+                            <!-- Product -->
+                            @php
+                                $produk = \App\Product::with('category')->get();
+                            @endphp
+                            @foreach ($produk as $data)
+                                <div class="product grid-item hot">
 								<div class="product_inner">
 									<div class="product_image">
-										<img src="/astar/images/tas4.jpg" alt="" width="250" height="300">
+										<img src="/assets/images/{{ $data->gambar }}" alt="" width="250" height="300">
 										<div class="product_tag">hot</div>
 									</div>
 									<div class="product_content text-center">
-										<div class="product_title"><a href="product.html"></a></div>
-										<div class="product_price">175k</div>
+										<div class="product_title"><a href="product.html">{{ $data->nama }}</a></div>
+										<div class="product_price">{{ $data->harga }}</div>
 										<div class="product_button ml-auto mr-auto trans_200"><a href="#">Add To Cart</a></div>
 									</div>
 								</div>
 							</div>
-
-							<!-- Product -->
-							<div class="product grid-item">
-								<div class="product_inner">
-									<div class="product_image"><img src="/astar/images/tas6.jpg" alt="" width="250" height="300"></div>
-									<div class="product_content text-center">
-										<div class="product_title"><a href="product.html"></a></div>
-										<div class="product_price">250k</div>
-										<div class="product_button ml-auto mr-auto trans_200"><a href="#">Add To Cart</a></div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Product -->
-							<div class="product grid-item sale">
-								<div class="product_inner">
-									<div class="product_image">
-										<img src="/astar/images/tas7.jpg" alt="" width="250" height="300">
-										<div class="product_tag">sale</div>
-									</div>
-									<div class="product_content text-center">
-										<div class="product_title"><a href="product.html"></a></div>
-										<div class="product_price">250k</div>
-										<div class="product_button ml-auto mr-auto trans_200"><a href="#">Add To Cart</a></div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Product -->
-							<div class="product grid-item">
-								<div class="product_inner">
-									<div class="product_image">
-										<img src="/astar/images/tas1.jpg" alt="" width="250" height="300">
-									</div>
-									<div class="product_content text-center">
-										<div class="product_title"><a href="product.html"></a></div>
-										<div class="product_price">309k</div>
-										<div class="product_button ml-auto mr-auto trans_200"><a href="#">Add To Cart</a></div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Product -->
-							<div class="product grid-item">
-								<div class="product_inner">
-									<div class="product_image">
-										<img src="/astar/images/tas8.jpg" alt="" width="250" height="300">
-									</div>
-									<div class="product_content text-center">
-										<div class="product_title"><a href="product.html"></a></div>
-										<div class="product_price">260k</div>
-										<div class="product_button ml-auto mr-auto trans_200"><a href="#">Add To Cart</a></div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Product -->
-							{{-- <div class="product grid-item new">
-								<div class="product_inner">
-									<div class="product_image">
-										<img src="/astar/images/product_6.jpg" alt="">
-										<div class="product_tag">new</div>
-									</div>
-									<div class="product_content text-center">
-										<div class="product_title"><a href="product.html">hype grey shirt</a></div>
-										<div class="product_price">$59.90</div>
-										<div class="product_button ml-auto mr-auto trans_200"><a href="#">Add To Cart</a></div>
-									</div>
-								</div>
-							</div> --}}
-
-							<!-- Product -->
-							{{-- <div class="product grid-item">
-								<div class="product_inner">
-									<div class="product_image">
-										<img src="/astar/images/product_7.jpg" alt="">
-									</div>
-									<div class="product_content text-center">
-										<div class="product_title"><a href="product.html">long sleeve jacket</a></div>
-										<div class="product_price">$15.90</div>
-										<div class="product_button ml-auto mr-auto trans_200"><a href="#">Add To Cart</a></div>
-									</div>
-								</div>
-							</div> --}}
-
-							<!-- Product -->
-							{{-- <div class="product grid-item sale">
-								<div class="product_inner">
-									<div class="product_image">
-										<img src="/astar/images/product_8.jpg" alt="">
-										<div class="product_tag">sale</div>
-									</div>
-									<div class="product_content text-center">
-										<div class="product_title"><a href="product.html">denim men shirt</a></div>
-										<div class="product_price">$43.99<span>RRP 64.40</span></div>
-										<div class="product_button ml-auto mr-auto trans_200"><a href="#">Add To Cart</a></div>
-									</div>
-								</div>
-							</div> --}}
+                            @endforeach
 
 						</div>
 					</div>

@@ -27,7 +27,7 @@
                                         <th>Kategori</th>
                                         <th>Harga</th>
                                         <th>Stok</th>
-                                        <th width="71px">Opsi</th>
+                                        <th width="150px">Opsi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -45,6 +45,63 @@
         </div>
     </div>
 </div>
+<!-- {{-- modal mulai --}} -->
+<div class="modal fade" id="modal" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <!-- Bagian header modal-->
+            <div class="modal-header">
+                <h4 class="modal-title">Tambah Data</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                    <img src="{{ asset('assets/backend/open-iconic/svg/x.svg') }}">
+                </button>
+            </div>
+            <!-- Akhir Bagian header modal-->
+            <!-- Bagian Body Modal-->
+            <div class="modal-body">
+                <!-- Form-->
+                <form id="form" name="form" class="form-horizontal" enctype="multipart/form-data">
+                    <input type="hidden" name="produk_id" id="produk_id">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <label for="name" class="control-label">Nama Produk</label>
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Produk" autocomplete="off" required>
+                        </div>
+                         <div class="col-sm-12">
+                            <label for="name" class="control-label">Nama Kategori</label>
+                            <select name="category_id" id="category_id" class="form-control"></select>
+                        </div>
+                         <div class="col-sm-12">
+                            <label for="name" class="control-label">Foto</label>
+                            <input type="file" name="gambar" id="gambar" class="form-control">
+                        </div>
+                         <div class="col-sm-12">
+                            <label for="name" class="control-label">Harga</label>
+                            <input type="text" name="harga" id="harga" class="form-control">
+                        </div>
+                         <div class="col-sm-12">
+                            <label for="name" class="control-label">Stok</label>
+                            <input type="text" name="stok" id="stok" class="form-control">
+                        </div>
+                        <div class="col-sm-12">
+                            <label for="name" class="control-label">Deskripsi</label>
+                            <textarea name="deskripsi" id="deskripsi" cols="30" rows="10" class="form-control"></textarea>
+                        </div>
+                </form>
+                <!-- Akhir Form-->
+            </div>
+            <!-- modal footer-->
+            <div class="modal-footer">
+                <button data-dismiss="modal" type="button" class="btn btn-danger pull-left"
+                id="reset">Batal</button>
+
+                <button align="right" type="submit" class="btn btn-primary" id="simpan">Simpan</button>
+            </div>
+            <!-- Akhir modal footer-->
+        </div>
+    </div>
+</div>
+<!-- modal berakhir -->
 @endsection
 
 @section('js')
@@ -59,14 +116,14 @@
     var table = $('.data-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: "{{ url('admin/produk') }}",
+        ajax: "{{ url('admin/product') }}",
         columns: [
             {data: 'DT_RowIndex', name: 'DT_RowIndex'},
-            {data: 'image', name: 'image'},
-            {data: 'name', name: 'name'},
+            {data: 'gambar', name: 'gambar'},
+            {data: 'nama', name: 'nama'},
             {data: 'slug', name: 'slug'},
-            {data: 'name.category', name: 'category_id'},
-            {data: 'price', name: 'price'},
+            {data: 'category.name', name: 'category_id'},
+            {data: 'harga', name: 'harga'},
             {data: 'stok', name: 'stok'},
             {data: 'action', name: 'action', orderable: false, searchable: false},
         ]
@@ -80,15 +137,15 @@
     });
     $('body').on('click','.edit',function(){
         var idProduk = $(this).data('id');
-        $.get("{{ url('admin/produk') }}"+"/"+idProduk+"/edit", function(data){
+        $.get("{{ url('admin/product') }}"+"/"+idProduk+"/edit", function(data){
             // console.log(data);
             $('#modal').modal({backdrop: 'static', keyboard: false});
             $('#modal').modal('show');
             $('#product_id').val(data.produk.id);
-            $('#name').val(data.produk.name);
+            $('#nama').val(data.produk.name);
             $('#category_id').html('');
             $('#category_id').html(data.category);
-            $('#price').val(data.produk.price);
+            $('#harga').val(data.produk.harga);
             $('#stok').val(data.produk.stok);
             // $('#foto').html(data.produk.foto);
             $('#description').val(data.produk.deskripsi);
@@ -98,7 +155,7 @@
         var idProduk = $(this).data('id');
         $.ajax({
             type: "DELETE",
-            url: "{{ url('admin/produk-destroy') }}"+"/"+idProduk,
+            url: "{{ url('admin/product-destroy') }}"+"/"+idProduk,
             success: function(data){
                 table.draw();
             },
@@ -114,7 +171,7 @@
         var formdata = new FormData($('#form')[0]);
         $.ajax({
             data: formdata,
-            url: "{{ url('admin/produk-store') }}",
+            url: "{{ url('admin/product-store') }}",
             type: "POST",
             cache:false,
             contentType: false,
@@ -136,7 +193,7 @@
         });
     });
     $.ajax({
-        url: "{{ url('admin/kategori') }}",
+        url: "{{ url('admin/category') }}",
         method: "GET",
         dataType: "json",
         success: function (berhasil) {
@@ -144,7 +201,7 @@
                 $('#category_id').append(
                     `
                     <option value="${value.id}">
-                        ${value.nama}
+                        ${value.name}
                     </option>
                     `
                 )
