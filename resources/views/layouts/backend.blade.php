@@ -88,7 +88,7 @@
 
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" aria-expanded="false" aria-controls="submenu-2"><i class="fa fa-fw fa-rocket"></i>Kustomer</a>
+                                <a class="nav-link" href="{{url('admin/customer')}}" aria-expanded="false" aria-controls="submenu-2"><i class="fa fa-fw fa-rocket"></i>Kustomer</a>
 
                             </li>
                             <li class="nav-item">
@@ -100,7 +100,7 @@
 
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" aria-expanded="false" aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>Stok</a>
+                                <a class="nav-link" href="{{url('admin/stokmasuk')}}" aria-expanded="false" aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>Stok Masuk</a>
 
                             </li>
                         </ul>

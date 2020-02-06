@@ -29,9 +29,10 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/cart', function () {
-    return view('cart');
-});
+Route::get('/cart', 'CartController@listCart');
+
+Route::post('/masukkeranjang', 'CartController@addToCart');
+Route::post('/updatekeranjang', 'CartController@updateCart');
 
 Route::group(['prefix' => '/admin', 'middleware' => ['auth']], function () {
     Route::get('/', 'HomeController@index');
@@ -40,10 +41,10 @@ Route::group(['prefix' => '/admin', 'middleware' => ['auth']], function () {
     // Route::post('/user-store', 'UserController@store');
     // Route::delete('/user-destroy/{id}', 'UserController@destroy');
 
-    // Route::get('/customer', 'CustomerController@index');
-    // Route::post('/customer-store', 'CustomerController@store');
-    // Route::get('/customer/{id}/edit', 'CustomerController@edit');
-    // Route::delete('/customer-destroy/{id}', 'CustomerController@destroy');
+    Route::get('/customer', 'CustomerController@index');
+    Route::post('/customer-store', 'CustomerController@store');
+    Route::get('/customer/{id}/edit', 'CustomerController@edit');
+    Route::delete('/customer-destroy/{id}', 'CustomerController@destroy');
 
     Route::get('/category', 'CategoryController@index');
     Route::post('/category-store', 'CategoryController@store');
@@ -55,13 +56,12 @@ Route::group(['prefix' => '/admin', 'middleware' => ['auth']], function () {
     Route::get('/product/{id}/edit', 'ProductController@edit');
     Route::delete('/product-destroy/{id}', 'ProductController@destroy');
 
-    // Route::get('/stokmasuk', 'StokmasukController@index');
-    // Route::post('/stokmasuk-store', 'StokmasukController@store');
-    // Route::get('/stokmasuk/{id}/edit', 'StokmasukController@edit');
-    // Route::delete('/stokmasuk-destroy/{id}', 'StokmasukController@destroy');
+    Route::get('/stokmasuk', 'StokmasukController@index');
+    Route::post('/stokmasuk-store', 'StokmasukController@store');
+    Route::get('/stokmasuk/{id}/edit', 'StokmasukController@edit');
+    Route::delete('/stokmasuk-destroy/{id}', 'StokmasukController@destroy');
 
     // Route::get('/order', 'OrderController@index');
 });
 
 Auth::routes();
-

@@ -160,6 +160,7 @@
 
 	<!-- Sidebar -->
 
+
 	<div class="sidebar">
 
 		<!-- Info -->
@@ -170,6 +171,7 @@
 
 
 				<!-- Currency -->
+
 
 			</div>
 		</div>
@@ -280,8 +282,14 @@
 									</div>
 									<div class="product_content text-center">
 										<div class="product_title"><a href="product.html">{{ $data->nama }}</a></div>
-										<div class="product_price">{{ $data->harga }}</div>
-										<div class="product_button ml-auto mr-auto trans_200"><a href="#">Add To Cart</a></div>
+                                        <div class="product_price">{{ $data->harga }}</div>
+                                    <form action="{{url('/masukkeranjang')}}" method="post">
+                                        @csrf
+                                    <input type="hidden" name="id_produk" value="{{$data->id}}">
+                                    <input type="hidden" name="qty" value="1">
+                                    <button type="submit" class="product_button ml-auto mr-auto trans_200">Add To Cart</button>
+                                    </form>
+
 									</div>
 								</div>
 							</div>

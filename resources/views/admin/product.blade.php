@@ -53,7 +53,7 @@
             <div class="modal-header">
                 <h4 class="modal-title">Tambah Data</h4>
                 <button type="button" class="close" data-dismiss="modal">
-                    <img src="{{ asset('assets/backend/open-iconic/svg/x.svg') }}">
+                    <img src="{{ asset('assets/images/close.jpeg') }}" style="width:20px; height:20px;">
                 </button>
             </div>
             <!-- Akhir Bagian header modal-->
