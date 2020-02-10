@@ -209,7 +209,7 @@
 			<ul>
 				<li><a href="/">home<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 				<li><a href="/category">category<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-				<li><a href="/about">about<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+				{{-- <li><a href="/about">about<i class="fa fa-angle-right" aria-hidden="true"></i></a></li> --}}
                 <li><a href="/cart">cart<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 
 			</ul>
@@ -265,9 +265,12 @@
 							<!-- Cart Items -->
 							<div class="cart_items">
 								<ul class="cart_items_list">
-
+                                <form action="{{url('/updatekeranjang')}}" method="post">
+                                    @csrf
                                     <!-- Cart Item -->
                                     @foreach ($carts as $data)
+                                    <input type="hidden" name="id_produk" value="{{$data['id_produk']}}">
+                                    <input type="hidden" name="qty" value="{{$data['qty']}}">
                                     <li class="cart_item item_list d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
 										<div class="product d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
                                         <div><div class="product_image"><img src="/assets/images/{{$data['foto_produk']}}" alt=""></div></div>
@@ -293,9 +296,10 @@
 								<div class="cart_buttons_inner ml-auto d-flex flex-row align-items-start justify-content-start flex-wrap">
 									<div class="button button_continue trans_200"><a href="categories.html">continue shopping</a></div>
 									<div class="button button_clear trans_200"><a href="categories.html">clear cart</a></div>
-									<div class="button button_update trans_200"><a href="categories.html">update cart</a></div>
-								</div>
-							</div>
+                                    <button type="submit" class="button button_update trans_200">Update</button>
+                                </div>
+                            </div>
+                        </form>
 						</div>
 					</div>
 				</div>
