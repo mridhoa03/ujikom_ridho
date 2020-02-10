@@ -257,8 +257,11 @@
 	<!-- Boxes -->
 
 
-	<!-- Categories -->
+    <!-- Categories -->
+    <br>
+    <br>
 
+    <center><h1 style="color:black"><strong>Produk Terbaru</strong></h1></center>
 
 	<!-- Products -->
 
@@ -271,14 +274,14 @@
 
                             <!-- Product -->
                             @php
-                                $produk = \App\Product::with('category')->get();
+                                $produk = \App\Product::with('category')->paginate(3);
                             @endphp
                             @foreach ($produk as $data)
                                 <div class="product grid-item hot">
 								<div class="product_inner">
 									<div class="product_image">
 										<img src="/assets/images/{{ $data->gambar }}" alt="" width="250" height="300">
-										<div class="product_tag">hot</div>
+										{{-- <div class="product_tag">hot</div> --}}
 									</div>
 									<div class="product_content text-center">
 										<div class="product_title"><a href="product.html">{{ $data->nama }}</a></div>
