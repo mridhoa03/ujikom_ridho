@@ -21,9 +21,12 @@ Route::get('/backend', function () {
     return view('layouts.backend');
 });
 
-Route::get('/category', function () {
-    return view('category');
-});
+
+Route::get('/category', 'FrontendController@index');
+
+
+Route::get('/category/{category}', 'FrontendController@category');
+
 
 Route::get('/about', function () {
     return view('about');

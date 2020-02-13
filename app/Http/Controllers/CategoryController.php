@@ -113,3 +113,5 @@ class CategoryController extends Controller
         return response()->json(["Success" => "Berhasil di hapus"]);
     }
 }
+
+

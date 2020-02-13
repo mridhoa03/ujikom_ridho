@@ -294,9 +294,9 @@
 							<!-- Cart Buttons -->
 							<div class="cart_buttons d-flex flex-row align-items-start justify-content-start">
 								<div class="cart_buttons_inner ml-auto d-flex flex-row align-items-start justify-content-start flex-wrap">
-									<div class="button button_continue trans_200"><a href="categories.html">continue shopping</a></div>
+									<!-- <div class="button button_continue trans_200"><a href="categories.html">continue shopping</a></div> -->
 									<div class="button button_clear trans_200"><a href="categories.html">clear cart</a></div>
-                                    <button type="submit" class="button button_update trans_200">Update</button>
+                                    <button type="submit" class="button button_update trans_200" style="width: 40%">Update</button>
                                 </div>
                             </div>
                         </form>

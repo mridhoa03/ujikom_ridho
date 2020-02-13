@@ -221,21 +221,11 @@
 							<div class="products_bar_content d-flex flex-column flex-xxl-row align-items-start align-items-xxl-center justify-content-start">
 								<div class="product_categories">
 									<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
-                                        @php
-                                            $kategori = \App\Category::All();
-                                        @endphp
+                                       
                                         @foreach ($kategori as $data)
-                                    <li><a href="#">{{ $data->name}}</a></li>
+                                    <li><a href="{{url('/category/'.$data->slug)}}">{{ $data->name}}</a></li>
                                         @endforeach
-                                        <li><div class="products_dropdown text-right product_dropdown_filter" style="margin-left: 200%; margin-top:10%" >
-										<div class="isotope_filter_text"><span>Filter</span><i class="fa fa-caret-down" aria-hidden="true"></i></div>
-										<ul>
-											<li class="item_filter_btn" data-filter="*">All</li>
-											<li class="item_filter_btn" data-filter=".hot">Hot</li>
-											<li class="item_filter_btn" data-filter=".new">New</li>
-											<li class="item_filter_btn" data-filter=".sale">Sale</li>
-										</ul>
-									</div></li>
+                                        
 									</ul>
 								</div>
 								<div class="products_bar_side ml-xxl-auto d-flex flex-row align-items-center justify-content-start">
@@ -264,9 +254,7 @@
                             <div class="products_container grid">
 
                                 <!-- Product -->
-                                @php
-                                    $produk = \App\Product::with('category')->get();
-                                @endphp
+                               
                                 @foreach ($produk as $data)
                                     <div class="product grid-item hot">
                                     <div class="product_inner">
