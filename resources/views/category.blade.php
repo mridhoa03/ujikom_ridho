@@ -260,7 +260,7 @@
                                     <div class="product_inner">
                                         <div class="product_image">
                                             <img src="/assets/images/{{ $data->gambar }}" alt="" width="250" height="300">
-                                            <div class="product_tag">hot</div>
+                                            <!-- <div class="product_tag">hot</div> -->
                                         </div>
                                         <div class="product_content text-center">
                                             <div class="product_title"><a href="product.html">{{ $data->nama }}</a></div>
