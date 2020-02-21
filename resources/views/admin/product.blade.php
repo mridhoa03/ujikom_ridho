@@ -122,7 +122,7 @@
             {data: 'gambar', name: 'gambar'},
             {data: 'nama', name: 'nama'},
             {data: 'slug', name: 'slug'},
-            {data: 'category.name', name: 'category_id'},
+            {data: 'category.nama', name: 'category_id'},
             {data: 'harga', name: 'harga'},
             {data: 'stok', name: 'stok'},
             {data: 'action', name: 'action', orderable: false, searchable: false},
@@ -141,14 +141,14 @@
             // console.log(data);
             $('#modal').modal({backdrop: 'static', keyboard: false});
             $('#modal').modal('show');
-            $('#product_id').val(data.produk.id);
-            $('#nama').val(data.produk.name);
-            $('#category_id').html('');
-            $('#category_id').html(data.category);
+            $('#produk_id').val(data.produk.id);
+            $('#nama').val(data.produk.nama);
+            $('#category_id').html(data.kategori);
+            $('#category_id').val(data.produk.category_id);
             $('#harga').val(data.produk.harga);
             $('#stok').val(data.produk.stok);
             // $('#foto').html(data.produk.foto);
-            $('#description').val(data.produk.deskripsi);
+            $('#deskripsi').val(data.produk.deskripsi);
         });
     });
     $('body').on('click','.hapus', function(){
@@ -201,7 +201,7 @@
                 $('#category_id').append(
                     `
                     <option value="${value.id}">
-                        ${value.name}
+                        ${value.nama}
                     </option>
                     `
                 )

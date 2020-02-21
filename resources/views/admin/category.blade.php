@@ -61,7 +61,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <label for="name" class="control-label">Nama Kategori</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Name Kategori" autocomplete="off" required>
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Kategori" autocomplete="off" required>
                             <p style="color: red;" id="error_nama"></p>
                         </div>
                 </form>
@@ -96,7 +96,7 @@
         ajax: "{{ url('admin/category') }}",
         columns: [
             {data: 'DT_RowIndex', name: 'DT_RowIndex'},
-            {data: 'name', name: 'name'},
+            {data: 'nama', name: 'nama'},
             {data: 'slug', name: 'slug'},
             {data: 'action', name: 'action', orderable: false, searchable: false},
         ]
@@ -113,7 +113,7 @@
             // console.log(data);
             $('#modal').modal({backdrop: 'static', keyboard: false});
             $('#modal').modal('show');
-            $('#name').val(data.name);
+            $('#nama').val(data.nama);
             $('#category_id').val(data.id);
         });
     });

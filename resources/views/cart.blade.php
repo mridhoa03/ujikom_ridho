@@ -207,10 +207,10 @@
 		<!-- Sidebar Navigation -->
 		<nav class="sidebar_nav">
 			<ul>
-				<li><a href="/">home<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-				<li><a href="/category">category<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+				<li><a href="/">home</a></li>
+				<li><a href="/category">category</a></li>
 				{{-- <li><a href="/about">about<i class="fa fa-angle-right" aria-hidden="true"></i></a></li> --}}
-                <li><a href="/cart">cart<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                <li><a href="/cart">cart</a></li>
 
 			</ul>
 		</nav>
@@ -230,16 +230,10 @@
 	<!-- Home -->
 
 	<div class="home">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/product_background.jpg" data-speed="0.8"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="/astar/images/cart.jpg" data-speed="0.8"></div>
 		<div class="home_container">
 			<div class="home_content">
 				<div class="home_title">Cart</div>
-				<div class="breadcrumbs">
-					<ul class="d-flex flex-row align-items-center justify-content-start">
-						<li><a href="index.html">Home</a></li>
-						<li>Your Cart</li>
-					</ul>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -276,7 +270,7 @@
                                         <div><div class="product_image"><img src="/assets/images/{{$data['foto_produk']}}" alt=""></div></div>
                                         <div class="product_name"><a href="product.html">{{ $data['nama_produk'] }}</a></div>
 										</div>
-
+                                        &nbsp;&nbsp;&nbsp;
 										<div class="product_price text-lg-center product_text"><span>Price: </span>Rp{{number_format($data['harga_produk'])}}</div>
 										<div class="product_quantity_container">
 											<div class="product_quantity ml-lg-auto mr-lg-auto text-center">
@@ -296,7 +290,7 @@
 								<div class="cart_buttons_inner ml-auto d-flex flex-row align-items-start justify-content-start flex-wrap">
 									<!-- <div class="button button_continue trans_200"><a href="categories.html">continue shopping</a></div> -->
 									<div class="button button_clear trans_200"><a href="categories.html">clear cart</a></div>
-                                    <button type="submit" class="button button_update trans_200" style="width: 40%">Update</button>
+                                    <button type="submit" class="button button_update trans_200" style="width: 70%"><font color="red"><b>Update</b></font></button>
                                 </div>
                             </div>
                         </form>

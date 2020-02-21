@@ -170,10 +170,10 @@
 		<!-- Sidebar Navigation -->
 		<nav class="sidebar_nav">
 			<ul>
-				<li><a href="/">home<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+				<li><a href="/">home</a></li>
 				<li><a href="/category">category</a></li>
 				{{-- <li><a href="/about">about<i class="fa fa-angle-right" aria-hidden="true"></i></a></li> --}}
-                <li><a href="/cart">cart<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                <li><a href="/cart">cart</a></li>
 
 			</ul>
 		</nav>
@@ -186,8 +186,15 @@
 			</form>
 		</div>
 
-		<!-- Cart -->
-
+        <!-- Cart -->
+        <div class="cart d-flex flex-row align-items-center justify-content-start">
+			<div class="cart_icon"><a href="/cart">
+				<img src="/astar/images/bag.png" alt="">
+				<div class="cart_num">2</div>
+			</a></div>
+			<div class="cart_text">Barang Anda</div>
+			{{-- <div class="cart_price">$39.99 (1)</div> --}}
+		</div>
 	</div>
 
 	<!-- Home -->
@@ -197,13 +204,6 @@
 		<div class="home_container">
 			<div class="home_content">
 				<div class="home_title">Shop</div>
-				<div class="breadcrumbs">
-					<ul class="d-flex flex-row align-items-center justify-content-start">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="#">Woman</a></li>
-						<li>Accessories</li>
-					</ul>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -221,11 +221,11 @@
 							<div class="products_bar_content d-flex flex-column flex-xxl-row align-items-start align-items-xxl-center justify-content-start">
 								<div class="product_categories">
 									<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
-                                       
+
                                         @foreach ($kategori as $data)
                                     <li><a href="{{url('/category/'.$data->slug)}}">{{ $data->name}}</a></li>
                                         @endforeach
-                                        
+
 									</ul>
 								</div>
 								<div class="products_bar_side ml-xxl-auto d-flex flex-row align-items-center justify-content-start">
@@ -254,7 +254,7 @@
                             <div class="products_container grid">
 
                                 <!-- Product -->
-                               
+
                                 @foreach ($produk as $data)
                                     <div class="product grid-item hot">
                                     <div class="product_inner">

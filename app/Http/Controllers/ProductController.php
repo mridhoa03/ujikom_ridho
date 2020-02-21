@@ -109,7 +109,7 @@ class ProductController extends Controller
                     ]
                 );
             } else {
-                $old_photo = \DB::select('SELECT foto FROM produks WHERE id = ' . $request->produk_id . '');
+                $old_photo = \DB::select('SELECT gambar FROM products WHERE id = ' . $request->produk_id . '');
                 $data = '';
                 foreach ($old_photo as $value) {
                     $data .= $value->gambar;
@@ -159,7 +159,7 @@ class ProductController extends Controller
     public function edit($id)
     {
          $produk = Product::find($id);
-        $kategori = \DB::select('SELECT id,nama FROM kategoris');
+        $kategori = \DB::select('SELECT id,nama FROM categories');
         foreach ($kategori as $value) {
             $data[] = '<option value="' . $value->id . '" ' . ($value->id == $produk->category_id ? 'selected' : '') . '>' . $value->nama . '</option>';
         }

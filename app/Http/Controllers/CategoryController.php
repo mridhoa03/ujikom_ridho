@@ -54,11 +54,11 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $slug = Str::slug($request->name, '-');
+        $slug = Str::slug($request->nama, '-');
         Category::updateOrCreate(
             ['id' => $request->category_id],
             [
-                'name' => $request->name,
+                'nama' => $request->nama,
                 'slug' => $slug
             ]
         );

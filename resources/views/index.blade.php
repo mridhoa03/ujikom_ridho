@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>aStar</title>
+<title>Sisil Bag</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="aStar Fashion Template Project">
@@ -201,7 +201,14 @@
 		</div>
 
 		<!-- Cart -->
-
+	<div class="cart d-flex flex-row align-items-center justify-content-start">
+			<div class="cart_icon"><a href="/cart">
+				<img src="/astar/images/bag.png" alt="">
+				<div class="cart_num">2</div>
+			</a></div>
+			<div class="cart_text">Barang Anda</div>
+			{{-- <div class="cart_price">$39.99 (1)</div> --}}
+		</div>
 	</div>
 
 	<!-- Home -->
