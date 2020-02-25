@@ -290,7 +290,7 @@
 								<div class="cart_buttons_inner ml-auto d-flex flex-row align-items-start justify-content-start flex-wrap">
 									<!-- <div class="button button_continue trans_200"><a href="categories.html">continue shopping</a></div> -->
 									<div class="button button_clear trans_200"><a href="categories.html">clear cart</a></div>
-                                    <button type="submit" class="button button_update trans_200" style="width: 70%"><font color="red"><b>Update</b></font></button>
+                                    <button type="submit" class="button button_update trans_200" style="width: 68%"><font color="red"><b>UPDATE</b></font></button>
                                 </div>
                             </div>
                         </form>
@@ -325,7 +325,7 @@
 										<div class="cart_extra_total_value ml-auto">Rp{{ number_format($subtotal) }}</div>
 									</li>
 								</ul>
-								<div class="checkout_button trans_200"><a href="checkout.html">proceed to checkout</a></div>
+								<div class="checkout_button trans_200"><a href="/checkout">proceed to checkout</a></div>
 							</div>
 						</div>
 					</div>

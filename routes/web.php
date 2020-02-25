@@ -28,8 +28,8 @@ Route::get('/category', 'FrontendController@index');
 Route::get('/category/{category}', 'FrontendController@category');
 
 
-Route::get('/about', function () {
-    return view('about');
+Route::get('/checkout', function () {
+    return view('checkout');
 });
 
 Route::get('/cart', 'CartController@listCart');

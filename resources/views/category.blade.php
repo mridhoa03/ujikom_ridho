@@ -221,9 +221,8 @@
 							<div class="products_bar_content d-flex flex-column flex-xxl-row align-items-start align-items-xxl-center justify-content-start">
 								<div class="product_categories">
 									<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
-
                                         @foreach ($kategori as $data)
-                                    <li><a href="{{url('/category/'.$data->slug)}}">{{ $data->name}}</a></li>
+                                    <li><a href="{{url('/category/'.$data->slug)}}">{{ $data->nama}}</a></li>
                                         @endforeach
 
 									</ul>
