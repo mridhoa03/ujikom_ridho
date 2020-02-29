@@ -13,6 +13,7 @@
 <link rel="stylesheet" type="text/css" href="/astar/plugins/OwlCarousel2-2.2.1/animate.css">
 <link rel="stylesheet" type="text/css" href="/astar/styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="/astar/styles/responsive.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@9.8.2/dist/sweetalert2.min.css">
 </head>
 <body>
 
@@ -68,7 +69,7 @@
 				<div class="cart d-flex flex-row align-items-center justify-content-start">
 					<div class="cart_icon"><a href="cart.html">
 						<img src="/astar/images/bag.png" alt="">
-						<div class="cart_num">2</div>
+						<div class="cart_num"></div>
 					</a></div>
 				</div>
 
@@ -204,7 +205,7 @@
 	<div class="cart d-flex flex-row align-items-center justify-content-start">
 			<div class="cart_icon"><a href="/cart">
 				<img src="/astar/images/bag.png" alt="">
-				<div class="cart_num">2</div>
+				<div class="cart_num"></div>
 			</a></div>
 			<div class="cart_text">Barang Anda</div>
 			{{-- <div class="cart_price">$39.99 (1)</div> --}}
@@ -443,5 +444,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="/astar/plugins/Isotope/isotope.pkgd.min.js"></script>
 <script src="/astar/plugins/Isotope/fitcolumns.js"></script>
 <script src="/astar/js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.8.2/dist/sweetalert2.all.min.js"></script>
 </body>
 </html>
+
+<script>
+    $(".trans_200").click(function() {
+        Swal.fire(
+        'Data Berhasil',
+        'DiTambahkan',
+        'success'
+        )
+    })
+</script>

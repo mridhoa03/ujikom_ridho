@@ -56,7 +56,7 @@
 				<div class="cart d-flex flex-row align-items-center justify-content-start">
 					<div class="cart_icon"><a href="cart.html">
 						<img src="/astar/images/bag.png" alt="">
-						<div class="cart_num">2</div>
+						<div class="cart_num"></div>
 					</a></div>
 				</div>
 
@@ -190,7 +190,7 @@
         <div class="cart d-flex flex-row align-items-center justify-content-start">
 			<div class="cart_icon"><a href="/cart">
 				<img src="/astar/images/bag.png" alt="">
-				<div class="cart_num">2</div>
+				<div class="cart_num"></div>
 			</a></div>
 			<div class="cart_text">Barang Anda</div>
 			{{-- <div class="cart_price">$39.99 (1)</div> --}}

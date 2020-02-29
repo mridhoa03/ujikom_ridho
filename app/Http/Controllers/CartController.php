@@ -89,4 +89,10 @@ class CartController extends Controller
         //STORE KE BROWSER UNTUK DISIMPAN
         return redirect()->back()->cookie($cookie);
     }
+     public function totalproduk()
+    {
+        $carts = $this->getCarts();
+        $total = count($carts);
+        return response()->json($total);
+    }
 }

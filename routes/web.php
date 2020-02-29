@@ -27,18 +27,24 @@ Route::get('/category', 'FrontendController@index');
 
 Route::get('/category/{category}', 'FrontendController@category');
 
-
-Route::get('/checkout', function () {
+Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
+   Route::get('/checkout', function () {
     return view('checkout');
 });
+});
+
+
+
 
 Route::get('/cart', 'CartController@listCart');
 
 Route::post('/masukkeranjang', 'CartController@addToCart');
 Route::post('/updatekeranjang', 'CartController@updateCart');
 
-Route::group(['prefix' => '/admin', 'middleware' => ['auth']], function () {
-    Route::get('/', 'HomeController@index');
+Route::group(['prefix' => '/admin', 'middleware' => 'admin'], function () {
+    Route::get('/dashboard', function() {
+        return view('admin/dashboard');
+    });
 
     // Route::get('/user', 'UserController@index');
     // Route::post('/user-store', 'UserController@store');
@@ -68,3 +74,4 @@ Route::group(['prefix' => '/admin', 'middleware' => ['auth']], function () {
 });
 
 Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
