@@ -13,6 +13,7 @@
 <link rel="stylesheet" type="text/css" href="/astar/plugins/OwlCarousel2-2.2.1/animate.css">
 <link rel="stylesheet" type="text/css" href="/astar/styles/categories.css">
 <link rel="stylesheet" type="text/css" href="/astar/styles/categories_responsive.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@9.8.2/dist/sweetalert2.min.css">
 </head>
 <body>
 
@@ -414,5 +415,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="/astar/plugins/Isotope/isotope.pkgd.min.js"></script>
 <script src="/astar/plugins/Isotope/fitcolumns.js"></script>
 <script src="/astar/js/categories.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.8.2/dist/sweetalert2.all.min.js"></script>
 </body>
 </html>
+
+<script>
+    $(".trans_200").click(function() {
+        Swal.fire(
+        'Data Berhasil',
+        'DiTambahkan',
+        'success',
+        )
+    })
+</script>

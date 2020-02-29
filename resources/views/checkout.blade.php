@@ -202,7 +202,37 @@
 		<!-- Logo -->
 		<div class="sidebar_logo">
 			<a href="#"><div>S_<span>bag</span></div></a>
-		</div>
+        </div>
+
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre
+                                style="margin: 10px 0px 0px 30px;color:#fff;">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="margin-right: 70px">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
 
 		<!-- Sidebar Navigation -->
 		<nav class="sidebar_nav">
@@ -221,7 +251,9 @@
 				<input type="text" class="search_input" placeholder="Search" required="required">
 				<button class="search_button"><i class="fa fa-search" aria-hidden="true"></i></button>
 			</form>
-		</div>
+        </div>
+
+
 
 		<!-- Cart -->
 		<div class="cart d-flex flex-row align-items-center justify-content-start">
@@ -272,33 +304,14 @@
 												<input type="text" id="checkout_last_name" class="checkout_input" required="required">
 											</div>
 										</div>
-										<div>
-											<!-- Company -->
-											<label for="checkout_company">Company</label>
-											<input type="text" id="checkout_company" class="checkout_input">
-										</div>
-										<div>
-											<!-- Country -->
-											<label for="checkout_country">Country*</label>
-											<select name="checkout_country" id="checkout_country" class="dropdown_item_select checkout_input" require="required">
-												<option></option>
-												<option>Lithuania</option>
-												<option>Sweden</option>
-												<option>UK</option>
-												<option>Italy</option>
-											</select>
-										</div>
+										
+										
 										<div>
 											<!-- Address -->
 											<label for="checkout_address">Address*</label>
 											<input type="text" id="checkout_address" class="checkout_input" required="required">
-											<input type="text" id="checkout_address_2" class="checkout_input checkout_address_2" required="required">
 										</div>
-										<div>
-											<!-- Zipcode -->
-											<label for="checkout_zipcode">Zipcode*</label>
-											<input type="text" id="checkout_zipcode" class="checkout_input" required="required">
-										</div>
+										
 										<div>
 											<!-- City / Town -->
 											<label for="checkout_city">City/Town*</label>
@@ -386,7 +399,7 @@
 												<input type="radio" name="radio">
 												<span class="checkmark"></span>
 											</label>
-											<label class="payment_option clearfix">Cach on delivery
+											<label class="payment_option clearfix">Cash on delivery
 												<input type="radio" name="radio">
 												<span class="checkmark"></span>
 											</label>
@@ -404,7 +417,7 @@
 									<!-- Order Text -->
 									<div class="order_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra temp or so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus.</div>
 
-									<div class="checkout_button trans_200"><a href="checkout.html">place order</a></div>
+									<div class="checkout_button trans_200"><a href="#">place order</a></div>
 								</div>
 							</div>
 
@@ -417,27 +430,7 @@
 
 	<!-- Newsletter -->
 
-	<div class="newsletter">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/newsletter.jpg" data-speed="0.8"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 offset-lg-2">
-					<div class="newsletter_content text-center">
-						<div class="newsletter_title_container">
-							<div class="newsletter_title">subscribe to our newsletter</div>
-							<div class="newsletter_subtitle">we won't spam, we promise!</div>
-						</div>
-						<div class="newsletter_form_container">
-							<form action="#" id="newsletter_form" class="newsletter_form">
-								<input type="email" class="newsletter_input" placeholder="your e-mail here" required="required">
-								<button class="newsletter_button">submit</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	
 
 	<!-- Footer -->
 
